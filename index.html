@@ -4,82 +4,131 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
+
+<div class="menu">
+<B><a href="#about">About Me |</a></B>
+<B><a href="#photos"> My Photos |</a></B>
+<B><a href="#playlist"> My Playlist |</a></B>
+<B><a href="#like"> Like |</a></B>
+<B><a href="#qrcoder"> QR code |</a></B>
+<B><a href="#spa"> Q&A |</a></B>
+<B><a href="#contact"> Contact Me</a></B>
 </div>
-		  
+<br/>
+<br/>
+<section id="LOGO" class="section">
+    <br/>
+  <img src="photos\\LOGO.jpg" alt="LOGO" width="500" height="100" >
+</section>
+
 <section id="about" class="section">
+    <br />
+  <br/>
+<h2>About EMINEM</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
+
+<font size="4.5">
+
+<B>Marshall Bruce Mathers III</B> - born October 17, 1972<br/> 
+known professionally as Eminem, is an American rapper, songwriter, record producer, record executive, film producer, and actor.<br/>
+He is consistently cited as one of the greatest and most influential artists of all time in hip hop,<br/>
+ with Rolling Stone placing him in its list of the 100 Greatest Artists of All Time and labeling him the "King of Hip Hop".<br/>
+After his debut album Infinite (1996) and the extended play Slim Shady EP (1997),<br/>
+Eminem signed with Dr. Dre's Aftermath Entertainment and subsequently achieved mainstream popularity in 1999 with The Slim Shady LP,<br/>
+which earned him his first Grammy Award for Best Rap Album.<br/>
+His next two releases, 2000's The Marshall Mathers LP and 2002's The Eminem Show, were worldwide successes, with each being certified diamond in U.S.<br/>
+sales and both winning Best Rap Album Grammy Awards—making Eminem the first artist to win the award for three consecutive LPs.<br/>
+They were followed by Encore in 2004, another critical and commercial success. Eminem went on hiatus after touring in 2005 partly due to a prescription drug addiction.<br/>
+He released Relapse in 2009 and Recovery in 2010. Both won Grammy Awards and Recovery was the best-selling album of 2010 worldwide, the second time he had the international<br/>
+best-selling album of the year (after The Eminem Show). Eminem's eighth album, 2013's The Marshall Mathers LP 2, won two Grammy Awards, including Best Rap Album; it expanded<br/>
+his record for the most wins in that category and his Grammy total to 15.<br/>
+These were followed by 2017's Revival and 2018's Kamikaze. the latter being the best-selling hip hop album of 2018.<br/>
+</font>
 <br/>
 </section>
 
 <section id="photos" class="section">
 <br/>
+<h2>Photos</h2>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="photos\\childhood.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\show.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\profile.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\kamikaza.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\tatos.jpg" style="width:45%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </section>
 
 <section id="playlist" class="section">
 <br/>
 <br/>
+<h2>My playlist</h2>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=RDEMASZzAB4N6PSfsOwzAhxYyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 <br/>
 </section>
 
@@ -90,18 +139,17 @@ my playlist
 <br/>
 <br/>
 <br/>
+<h2>Give me a like</h2>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
+<div class="container">
+
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.eminem.com%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+</div>
 <br/>
 <br/>
 </section>
@@ -112,66 +160,110 @@ give me a like
 <br/>
 <br/>
 <br/>
+<h2>Scan my code</h2>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
+<img src="photos\\qrcoder.jpg" alt="qrcoder" width="200" height="200">
+
 <br/>
 </section>
 
 <section id="spa" class="section">
 <br/>
 <br/>
+<h2>Ans</h2>
+<br/>
+
+<b>3 main differences:</b>
 <br/>
 <br/>
+1. Web 1.0 <br/>
+Web 1.0 refers to the first stage of the World Wide Web evolution.
+In Web 1.0 advertisements on websites while surfing the internet is banned.
+Also, in Web 1.0, Ofoto is an online digital photography website, on which user could store, share, view and print digital pictures.
+It is the “readable” phrase of the World Wide Web with flat data.
+In Web 1.0, there is only limited interaction between sites and web users. 
+Web 1.0 is simply an information portal where users passively receive information without being given the opportunity to post reviews, comments, and feedback.
+Static pages. Content is served from the server’s file-system.
+
 <br/>
 <br/>
+2. Web 2.0 <br/>
+Web 2.0 refers to world wide website which highlight user-generated content,<br/>
+usability and interoperability for end users.<br/>
+It is the “writable” phrase of the World Wide Web with interactive data. Unlike Web 1.0, Web 2.0 facilitates interaction between web users and sites, <br/>
+so it allows users to interact more freely with each other. Web 2.0 encourages participation, collaboration, and information sharing. <br/>
+A major difference is now Information flows between site owner and
+site users by means of evaluation & online commenting.
+As such, the end user is not only a user of the application but also a participant.
+Examples of Web 2.0 applications are Youtube, Wiki, Flickr, Facebook, and so on.<br/>
+
 <br/>
 <br/>
+3. Web 3.0 <br/>
+It refers the evolution of web utilization and interaction which includes altering the Web into a database.<br/>
+It is the “executable” phrase of Word Wide Web with dynamic applications, interactive services, and “machine-to-machine” interaction.<br/> 
+Web 3.0 is a semantic web which refers to the future. In Web 3.0, computers can interpret information like humans and intelligently generate <br/>
+and distribute useful content tailored to the needs of users. One example of Web 3.0 is Tivo, a digital video recorder. Its recording program <br/>
+can search the web and read what it finds to you based on your preferences.
+A major difference is Semantic Web.<br />
+The succeeding evolution of the Web involves the Semantic Web.<br />
+The semantic web improves web technologies in demand to create, share and connect content through<br />
+    search and analysis based on the capability to comprehend the meaning of words, rather than on keywords or numbers.
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+Examle: For the query: "Eminem" <br/>
+Web 1.0 will give a static results. <br/>
+Web 2.0 will give a interactive results such as Eminem's Facebook page. <br/>
+Web 3.0 will give a dynamic results, <br />
+which based on the wisdom of the crowd, for example the last information the user was looking for about the artist. <br />
+I will get interactive pages that have a lot of posts with a query like mine -<br />
+those pages contain database based on more than trillion user posts with a query like mine or queries in the same topic.<br />
 </section>
 
 <section id="contact" class="section">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
+<h2>Contact me</h2>
+<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" placeholder="Your Name"><br>
+E-mail:<br>
+<input type="text" name="mail" placeholder="Email Address"><br>
+<label for="country">Country</label><br>
+<select id="country" name="country">
+  <option value="israel">Israel</option>
+  <option value="canada">Canada</option>
+  <option value="Italy">Italy</option>
+  <option value="spain">Spain</option>
+  <option value="usa">USA</option>
+  <option value="fsrance">France</option>
+  <option value="other">Other</option>
+</select>
+<br>
+<label for="emojis">Emojis</label><br>
+
+<input list="emojis" name= "emojis" >
+<datalist id= "emojis" width="10px">
+  <option value=&#128512>
+  <option value=&#128514>
+  <option value=&#128515>
+  <option value=&#128542>
+  <option value=&#128532>
+</datalist>
+
+<br>
+Comment:<br>
+<textarea id="subject" name="comment" placeholder="Write something.." style="height:200px"></textarea><br><br>
+
+<input type="submit" onclick="alert('sent!')" value="Send">
+<input type="reset" value="Reset">
+</form>
+
+
+
 <br/>
 </section>
 
